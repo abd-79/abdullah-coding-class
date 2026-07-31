@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW Book Donations Form</title>
+    </head>
+    <body>
+        <p>
+            Fill in the form below to donate your books!
+        </p>
+
+        <hr>
+
+        <form>
+            <fieldset>
+                <legend>Donor Details</legend>
+
+                <label>Donor Name</label><br>
+                <input type="text" id="donor-name" placeholder="Enter your full name"><br><br>
+
+                <label>Email Address</label><br>
+                <input type="email" id="email" placeholder="Enter your email address"><br><br>
+
+                <label>Phone Number</label><br>
+                <input type="tel" id="phone" placeholder="Enter your phone number"><br>
+                
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Book Information</legend>
+
+                <label>Book Category</label>
+
+                <select id="category">
+                    <option value="">--Select a category--</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-Fiction</option>
+                    <option value="textbooks">Textbooks / Academic</option>
+                    <option value="children">Children's Books</option>
+                </select><br><br>
+
+                <label>Book Condition</label><br>
+                <input type="radio" name="condition" value="new"> New / Like New<br>
+                <input type="radio" name="condition" value="good"> Good<br>
+                <input type="radio" name="condition" value="fair"> Fair<br><br>
+
+                <label>Book Titles & Quantity</label><br>
+                <textarea id="book-info" rows="3" cols="35" placeholder="e.g. 2 x Science Textbooks, 1 x Harry Potter"></textarea>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Preferred Drop-off Days</legend>
+
+                <input type="checkbox" value="mon"> Monday<br>
+                <input type="checkbox" value="tue"> Tuesday<br>
+                <input type="checkbox" value="wed"> Wednesday<br>
+                <input type="checkbox" value="thur"> Thursday<br>
+                <input type="checkbox" value="fri"> Friday<br>
+                <input type="checkbox" value="sat"> Saturday<br>
+                <input type="checkbox" value="sun"> Sunday<br><br>
+
+                 <label>Date Of Preffered Drop-Off </label><br>
+                <input type="date" id="dob"><br>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Extra Notes</legend>
+
+                <label>Additional information for drop-off</label><br>
+                <textarea id="extra-notes" rows="3" cols="35" placeholder="e.g. Books are packed in 2 cardboard boxes"></textarea>
+
+            </fieldset>
+
+            <br>
+            <input type="submit" value="Submit Donation">
+        </form>
+    </body>
+</html>
