@@ -6,6 +6,49 @@
         <title> My animal Safari</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <style>
+            body {
+                position: relative;
+            }
+            
+            .safari-slide {
+                height: 200px;
+                text-align: center;
+                padding-top: 75px;
+                font-size: 1.8rem;
+                color: white;
+            }
+
+            .slide-forest {
+                background: darkgreen;
+            }
+
+            .slide-ocean {
+                background: steelblue;
+            }
+
+            .slide-desert {
+                background: orange;
+            }
+
+            .section {
+                padding: 70px 20px;
+                min-height: 300px;
+            }
+            
+            #forest {
+                background: honeydew;
+            }
+
+            #ocean {
+                background: aliceblue;
+            }
+
+            #desert {
+                background: lightyellow;
+            }
+        </style>
     </head>
     <body data-spy="scroll" data-target="#safariNav" data-offset="60">
         <!-- TOPIC 1, 2, 3: CAROUSEL-->
@@ -32,7 +75,7 @@
         </div>
 
         <!-- TOPIC 4: SCROLLSPY-->
-        <nav id="safariNav" class="navbar navbar-expend-sm navbar-dark bg-dark sticky-top">
+        <nav id="safariNav" class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
             <span class="navbar-brand">🦁 Safari Guide</span>
 
             <ul class="navbar-nav">
@@ -47,6 +90,20 @@
                 <h2>🌿 Forest Safari</h2>
                 <p>Explore tall trees and diiscover tigers,elephants, and monkeys!</p>
             </div>
+
+            <div id="ocean" class="section">
+                <h2>🌊 Ocean Safari</h2>
+                <p>Dive deep and meet dolphins, sharks, and colorful clowfish!</p>
+            </div>
+
+            <div id="desert" class="section">
+                <h2>🏜️ Desert Safari</h2>
+                <p>Trek across the sand dunesand spots camels, lizards, and deserts foxes!</p>
+            </div>
         </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </body>
 </html>
