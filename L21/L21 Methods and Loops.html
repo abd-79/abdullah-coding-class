@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Methods and Loops</title>
+    </head>
+    <body>
+        <!-- Added missing container element for result -->
+        <p id="result"></p>
+
+        <script>
+            // for loop
+            var number = "";
+            for (let i = 1; i <= 10; i++) {
+                number += i + "<br>";
+            } 
+            document.getElementById("result").innerHTML = number;
+
+            // random value is rounded off (0 to 99)
+            document.write("The random value is " + Math.floor(Math.random() * 100));
+            document.write("<br>");
+
+            // for displaying current Date
+            var date = new Date();
+            document.write("Today's date is " + date.toLocaleDateString());
+        </script>
+    </body>
+</html>
