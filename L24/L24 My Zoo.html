@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> My ZOO</title>
+
+    </head>
+    <body>
+        <h1>My Zoo</h1>
+        <p>Use Javascript and the DOM to add to each cage!</p>
+
+        <!--
+        DOM Tree zoo is the parent element node.
+        Zone divs are child  elements nodes. Animal names inside each span are text nodes.
+        -->
+
+        <div id="zoo">
+            <div class="zone">Zone 1: <span id="zone1"></span></div>
+            <div class="zone">Zone 2: <span id="zone2"></span></div>
+            <div class="zone">Zone 3: <span id="zone3"></span></div>
+            <div class="zone">Total Animals:  <span id="total"></span></div>
+        </div>
+
+        <br>
+
+        <button onclick="openZoo()">Open The Zoo!</button>
+
+        <p id="zoo-status"></p>
+
+        <script>
+
+            function openZoo() {
+
+                /* Task 1: Add your first aniaml to Zone 1 */
+                document.getElementById("zone1").innerHTML = "Lion";
+
+                /* Task 2: Add your second aniaml to Zone 2 */
+                document.getElementById("zone2").innerHTML = "Elephent";
+
+                /* Task 3: Add your third aniaml to Zone 3 */
+                document.getElementById("zone3").innerHTML = "penguin";
+
+                /* Task 4: Show the total number of animals */
+                document.getElementById("total").innerHTML = "3";
+
+                /* Task 5: Change the zoo background color */
+                document.getElementById("zoo").style.backgroundColor = "lightgreen";
+
+                /* Task 6: Use the document object to show the page title */
+                document.getElementById("zoo-status").innerHTML = document.title + " is now open!";
+
+            }
+
+        </script>
+    </body>
+</html>
