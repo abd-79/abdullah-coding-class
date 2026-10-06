@@ -4,6 +4,37 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Game Profile</title>
+
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background: aliceblue;
+                text-align: center;
+                padding: 30px;
+            }
+
+            h1 {
+                color: navy;
+            }
+
+            button {
+                background: navy;
+                color: white;
+                padding: 10px 25px;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+
+            div {
+                border: 1px solid navy;
+                width: 280px;
+                margin: 6px auto;
+                padding: 8px 12px;
+                text-align: left;
+                border-radius: 6px;
+            }
+        </style>
     </head>
     <body>
         <h1>My Game Profile</h1>
@@ -57,6 +88,25 @@
                 else {
                     greeting = "Good Evenenig";
                 }
+
+                // While loop - Stars
+                let stars = "";
+                let count = 0;
+
+                while (count < 5) {
+                    stars = stars + "* ";
+                    count = count + 1;
+                }
+
+                // String Concatenation - Show on Page
+                document.getElementById("name").innerHTML       = name;
+                document.getElementById("score").innerHTML      = myScore + " out of " + highScore;
+                document.getElementById("record").innerHTML     = isTopScore;
+                document.getElementById("rank").innerHTML       = rank;
+                document.getElementById("greeting").innerHTML   = greeting;
+                document.getElementById("stars").innerHTML      = stars;
+                document.getElementById("bonus").innerHTML      = bonus;
+                document.getElementById("team").innerHTML       = team;
             }
         </script>
     </body>
