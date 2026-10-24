@@ -6,6 +6,21 @@
         <title>My Playlist Sorter</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <style>
+            body {
+                background: lavender;
+            }
+
+            h1,h3 {
+                color: darkviolet;
+            }
+
+            .box {
+                background: white;
+                color: darkviolet;
+            }
+        </style>
     </head>
     <body>
         <div class="container py-4">
@@ -20,9 +35,9 @@
                 <div class="card-body">
                     <h3 class="class-title">Song Names</h3>
 
-                    <button class="btn btn-primarym mr-2" onclick="sortAZ()">Sort A to Z</button>
+                    <button class="btn btn-primary mr-2" onclick="sortAZ()">Sort A to Z</button>
 
-                    <button class="btn btn-primarym" onclick="sortZA()">Sort Z to A</button>
+                    <button class="btn btn-primary" onclick="sortZA()">Sort Z to A</button>
 
                     <div id="nameResult" class="box p-3 mt-3 rounded"></div>
                 </div>
@@ -33,9 +48,11 @@
                 <div class="card-body">
                     <h3 class="card-title">Play Counts</h3>
 
-                    <button class="btn btn-primarym mr-2" onclick="sortLeast()">Least Played First</button>
+                    <button class="btn btn-primary mr-2" onclick="sortLeast()">Least Played First</button>
 
                     <button class="btn btn-primary" onclick="sortMost()">Most Played First</button>
+
+
 
                     <div id="countResult" class="box p-3 mt-3 rounded"></div>
                 </div>
@@ -46,7 +63,7 @@
                 <div class="card-body">
                     <h3 class="card-title">Label Every PLay Count</h3>
 
-                    <button class="btn btn-ptimary" onclick="addLabel()">Add Plays Label</button>
+                    <button class="btn btn-primary" onclick="addLabel()">Add Plays Label</button>
 
                     <div id="labelResult" class="box p-3 mt-3 rounded"></div>
                 </div>
@@ -73,6 +90,21 @@
                 songs.sort();
                 songs.reverse();
                 document.getElementById("nameResult").innerHTML = "Z to A: " + songs;
+            }
+
+            function sortLeast() {
+                plays.sort(function(a,b){return(a-b)});
+                document.getElementById("countResult").innerHTML = "Least played first: "  + plays;
+            }
+
+            function sortMost() {
+                plays.sort(function(a,b){return(b-a)});
+                document.getElementById("countResult").innerHTML = "Most played first: "  + plays;
+            }
+
+            function addLabel() {
+                var L = plays.map(function(c){return c+" plays";});
+                document.getElementById("labelResult").innerHTML = "Labelled: " +L;
             }
         </script>
     </body>
