@@ -53,6 +53,12 @@
 
             <script>
                 var sen = "The dragon flew over the big castle.";
+
+                function toStr() {
+                    var v = document.getElementById("numin").value;
+
+                    document.getElementById("convResult").innerHTML = "String(" + v + ") = '" + String(v) + "' - now it is a: " + typeof String(v);
+                }
             </script>
         </body>
         </html>
