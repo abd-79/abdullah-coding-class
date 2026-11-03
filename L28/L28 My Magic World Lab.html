@@ -59,6 +59,25 @@
 
                     document.getElementById("convResult").innerHTML = "String(" + v + ") = '" + String(v) + "' - now it is a: " + typeof String(v);
                 }
+
+                function toNum() {
+                    var v = document.getElementById("numIn").value;
+
+                    document.getElementById("convResult").innerHTML = "Number('"+ v + "') = " + Number(v) + " - now it is a: " + typeof Number(v);zz
+                }
+
+                function doSearch() {
+                    var w = document.getElementById("findW").value;
+                    var p = sen.search(W);
+
+                    document.getElementById("srResult").innerHTML = p === -1 ? "'" + w +"' is not in the sentence - try another word!" : "Found '"+ w + "' hiding at position " + p +"!";
+                }
+
+                function doReplace() {
+                    var w = document.getElementById("findW").value;
+
+                    document.getElementById("srResult").innerHTML = "New sentences : " + sen.replace(w, document.getElementById("swapW").value);
+                }
             </script>
         </body>
         </html>
