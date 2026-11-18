@@ -1,0 +1,36 @@
+/* Pricing text color */
+.price-tag {
+  font-weight: bold;
+  color: #198754; 
+}
+
+/* Ensure all images stay exactly the same height without stretching */
+.menu-image {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Smooth transition for the hover animation */
+.menu-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card lifts up and shadow expands when hovered */
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Custom styling for the category headers */
+.category-title {
+  color: #dc3545; /* Bootstrap danger color to match buttons */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Button hover effect */
+.order-btn {
+  transition: background-color 0.2s ease;
+  border-width: 2px;
+}
